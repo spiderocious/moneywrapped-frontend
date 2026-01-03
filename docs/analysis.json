@@ -1,0 +1,674 @@
+{
+  "success": true,
+  "data": {
+    "code": "OC7BFT09",
+    "status": "success",
+    "fileName": "Moniepoint-Document-2026-01-01T09-24.pdf",
+    "fileSize": 24499,
+    "fileType": "pdf",
+    "uploadedAt": "2026-01-01T22:21:26.772Z",
+    "completedAt": "2026-01-01T22:25:54.586Z",
+    "analysisResult": {
+      "metadata": {
+        "period_start": "2025-12-02",
+        "period_end": "2026-01-01",
+        "days_analyzed": 31,
+        "bank": "Moniepoint Microfinance Bank",
+        "account_type": "Business"
+      },
+      "executive_summary": {
+        "health_score": 47,
+        "rating": "At risk",
+        "grade": "C",
+        "primary_concern": "Large, concentrated transfers to one individual and a single large savings/top-up that leave the account with ~1 day of runway",
+        "biggest_win": "Received salary of 1553974.59 on 2025-12-19 which funded aggressive saving and obligations",
+        "key_recommendation": "Limit transfers to ADEWALE OLUWAFERANMI to 3 transactions/month (cap 232560) and reduce manual plan top-up from 950000 to 200000 this month"
+      },
+      "cashflow": {
+        "opening_balance": 535284.46,
+        "closing_balance": 94964.05,
+        "total_inflow": 1810994.59,
+        "total_outflow": 2251315,
+        "net_cashflow": -440320.41,
+        "avg_daily_balance": 315124.255,
+        "days_in_overdraft": 0,
+        "burn_rate": 72624.03225806452,
+        "runway_days": 1.3082155471869668,
+        "largest_inflow": {
+          "amount": 1553974.59,
+          "date": "2025-12-19",
+          "source": "Salary (Moniepoint MICR)"
+        },
+        "largest_outflow": {
+          "amount": 950000,
+          "date": "2025-12-19",
+          "recipient": "Plans, Manual top-up, Flexible Savings",
+          "category": "savings/plan deposit"
+        },
+        "income_sources": [
+          {
+            "source": "Salary (Moniepoint)",
+            "amount": 1553974.59,
+            "frequency": "monthly"
+          },
+          {
+            "source": "Voucher / Moniepoint Micr credit",
+            "amount": 140000,
+            "frequency": "one-time"
+          },
+          {
+            "source": "Plans withdrawal (principal + interest)",
+            "amount": 100000,
+            "frequency": "one-time"
+          }
+        ]
+      },
+      "spending": {
+        "total": 2251315,
+        "categories": [
+          {
+            "name": "savings / plans (outflows to Flexible Savings)",
+            "amount": 965500,
+            "percentage": 0.429,
+            "count": 32,
+            "avg_transaction": 30171.875,
+            "necessity": "planned"
+          },
+          {
+            "name": "person-to-person transfers (family / recipients)",
+            "amount": 1165750,
+            "percentage": 0.5179,
+            "count": 41,
+            "avg_transaction": 28434.878048780487,
+            "necessity": "mixed"
+          },
+          {
+            "name": "groceries / retail / pharmacy",
+            "amount": 75995,
+            "percentage": 0.0338,
+            "count": 7,
+            "avg_transaction": 10856.42857142857,
+            "necessity": "essential"
+          },
+          {
+            "name": "food / restaurants / catering",
+            "amount": 22920,
+            "percentage": 0.0102,
+            "count": 6,
+            "avg_transaction": 3820,
+            "necessity": "wants"
+          },
+          {
+            "name": "cash withdrawals / DTP",
+            "amount": 21000,
+            "percentage": 0.0093,
+            "count": 5,
+            "avg_transaction": 4200,
+            "necessity": "mixed"
+          },
+          {
+            "name": "fees (EMTL)",
+            "amount": 150,
+            "percentage": 0.0000667,
+            "count": 3,
+            "avg_transaction": 50,
+            "necessity": "avoidable"
+          }
+        ]
+      },
+      "top_merchants": [
+        {
+          "name": "Plans (Flexible Savings)",
+          "category": "savings/plan",
+          "total_spent": 965500,
+          "visit_count": 32,
+          "avg_per_visit": 30171.875
+        },
+        {
+          "name": "ADEWALE OLUWAFERANMI",
+          "category": "person/transfer",
+          "total_spent": 620160,
+          "visit_count": 8,
+          "avg_per_visit": 77520
+        },
+        {
+          "name": "FAITH ADEOLA MOREBISE",
+          "category": "person/transfer",
+          "total_spent": 67060,
+          "visit_count": 3,
+          "avg_per_visit": 22353.333333333332
+        },
+        {
+          "name": "SAHEED OLALEKAN",
+          "category": "person/transfer",
+          "total_spent": 49060,
+          "visit_count": 3,
+          "avg_per_visit": 16353.333333333334
+        },
+        {
+          "name": "JAMIU AKANMU",
+          "category": "person/transfer",
+          "total_spent": 49040,
+          "visit_count": 2,
+          "avg_per_visit": 24520
+        },
+        {
+          "name": "BOVAS - COMPANY LIMITED",
+          "category": "retail/company",
+          "total_spent": 35200,
+          "visit_count": 2,
+          "avg_per_visit": 17600
+        },
+        {
+          "name": "JUST RITE LIMITED",
+          "category": "groceries",
+          "total_spent": 31790,
+          "visit_count": 2,
+          "avg_per_visit": 15895
+        },
+        {
+          "name": "MUMEEN OYEKUNLE",
+          "category": "person/transfer",
+          "total_spent": 28020,
+          "visit_count": 1,
+          "avg_per_visit": 28020
+        }
+      ],
+      "transfers": {
+        "total_sent": 2131250,
+        "total_received": 1810994.59,
+        "transfer_to_spending_ratio": 0.9469,
+        "top_recipients": [
+          {
+            "name": "ADEWALE OLUWAFERANMI",
+            "total": 620160,
+            "count": 8,
+            "avg_per_transaction": 77520,
+            "pattern": "frequent, multiple large transfers across month",
+            "relationship_type": "personal"
+          },
+          {
+            "name": "FAITH ADEOLA MOREBISE",
+            "total": 67060,
+            "count": 3,
+            "avg_per_transaction": 22353.333333333332,
+            "pattern": "several medium transfers",
+            "relationship_type": "personal"
+          },
+          {
+            "name": "SAHEED OLALEKAN",
+            "total": 49060,
+            "count": 3,
+            "avg_per_transaction": 16353.333333333334,
+            "pattern": "multiple small-to-medium transfers",
+            "relationship_type": "personal"
+          },
+          {
+            "name": "JAMIU AKANMU",
+            "total": 49040,
+            "count": 2,
+            "avg_per_transaction": 24520,
+            "pattern": "two medium transfers late month",
+            "relationship_type": "personal"
+          },
+          {
+            "name": "BOVAS - COMPANY LIMITED",
+            "total": 35200,
+            "count": 2,
+            "avg_per_transaction": 17600,
+            "pattern": "retail/company purchases",
+            "relationship_type": "merchant"
+          },
+          {
+            "name": "JUST RITE LIMITED",
+            "total": 31790,
+            "count": 2,
+            "avg_per_transaction": 15895,
+            "pattern": "grocery purchases",
+            "relationship_type": "merchant"
+          },
+          {
+            "name": "MARIAM D.SPECIAL KITCHEN AND CATERING",
+            "total": 10000,
+            "count": 3,
+            "avg_per_transaction": 3333.3333333333335,
+            "pattern": "three catering payments same day",
+            "relationship_type": "merchant"
+          },
+          {
+            "name": "AMOS ADEOMI",
+            "total": 33900,
+            "count": 2,
+            "avg_per_transaction": 16950,
+            "pattern": "two transfers",
+            "relationship_type": "personal"
+          }
+        ],
+        "generosity_score": 0.6439,
+        "potential_loans": [
+          {
+            "recipient": "ADEWALE OLUWAFERANMI",
+            "amount": 620160,
+            "recommendation": "Avoid new loan exposure; if lending, cap to 100000 and require written repayment schedule"
+          },
+          {
+            "recipient": "FAITH ADEOLA MOREBISE",
+            "amount": 67060,
+            "recommendation": "Limit monthly support to 20000 and track repayments"
+          },
+          {
+            "recipient": "SAHEED OLALEKAN",
+            "amount": 49060,
+            "recommendation": "Consolidate to single monthly transfer capped at 20000"
+          }
+        ]
+      },
+      "patterns": {
+        "by_day_of_week": [
+          {
+            "day": "Friday",
+            "amount": 1310894.05,
+            "count": 12
+          },
+          {
+            "day": "Wednesday",
+            "amount": 375000,
+            "count": 9
+          },
+          {
+            "day": "Tuesday",
+            "amount": 210000,
+            "count": 6
+          },
+          {
+            "day": "Monday",
+            "amount": 120000,
+            "count": 4
+          },
+          {
+            "day": "Thursday",
+            "amount": 90000,
+            "count": 5
+          },
+          {
+            "day": "Saturday",
+            "amount": 40000,
+            "count": 3
+          },
+          {
+            "day": "Sunday",
+            "amount": 30000,
+            "count": 2
+          }
+        ],
+        "by_time_of_day": [
+          {
+            "window": "22:00-22:59",
+            "amount": 15500,
+            "activities": [
+              "daily savings contributions"
+            ]
+          },
+          {
+            "window": "12:00-15:00",
+            "amount": 250000,
+            "activities": [
+              "salary receipt and large manual plan top-up (12:59 and 13:22 on 2025-12-19)"
+            ]
+          },
+          {
+            "window": "18:00-21:00",
+            "amount": 210000,
+            "activities": [
+              "evening transfers, groceries and restaurants"
+            ]
+          }
+        ],
+        "dangerous_windows": [
+          {
+            "period": "2025-12-19 12:59-13:30",
+            "spent": 1103974.59,
+            "reason": "Salary cleared then immediate manual top-up 950000 plus multiple large transfers same hour"
+          },
+          {
+            "period": "Evenings (18:00-21:00) multiple dates",
+            "spent": 85000,
+            "reason": "Concentrated food/retail/outflows late evening"
+          },
+          {
+            "period": "22:00-22:59 (daily)",
+            "spent": 15500,
+            "reason": "Automatic daily plan contributions leave limited intraday liquidity"
+          }
+        ],
+        "payday_behavior": {
+          "estimated_payday": "2025-12-19",
+          "spending_spike": true,
+          "days_to_spend_50_percent": 0
+        }
+      },
+      "recurring": {
+        "total_monthly_cost": 15500,
+        "items": [
+          {
+            "description": "Daily Plans contribution (500/day)",
+            "frequency": "daily",
+            "monthly_cost": 15500,
+            "annual_projection": 186000,
+            "cancellable": "no"
+          },
+          {
+            "description": "Electronic Money Transfer Levy",
+            "frequency": "occasional (3 times this period)",
+            "monthly_cost": 150,
+            "annual_projection": 1800,
+            "cancellable": "yes - avoidable by switching channel"
+          },
+          {
+            "description": "DTP / cash withdrawals",
+            "frequency": "occasional",
+            "monthly_cost": 21000,
+            "annual_projection": 252000,
+            "cancellable": "partial"
+          }
+        ]
+      },
+      "behavior_insights": {
+        "personality_type": "highly generous, action-oriented with low liquidity focus",
+        "maturity_score": 62,
+        "decision_style": "impulse decisions around payday; automated micro-savings",
+        "strengths": [
+          "consistent automated savings contributions",
+          "able to deposit large lump sums when funded",
+          "regular income inflow"
+        ],
+        "weaknesses": [
+          "concentrated transfers to a single individual",
+          "low runway after outflows",
+          "payday impulse large top-ups",
+          "small avoidable fees"
+        ],
+        "risks": [
+          {
+            "risk": "Concentrated counterparty exposure (ADEWALE OLUWAFERANMI)",
+            "severity": "high",
+            "description": "620160 sent to one individual in month (8 payments) creates concentrated risk",
+            "fix": "Limit to 3 payments/month and require a repayment schedule"
+          },
+          {
+            "risk": "Immediate large top-up after salary",
+            "severity": "high",
+            "description": "950000 manual top-up on payday drained liquid balance",
+            "fix": "Cap manual top-up to 200000 or move to scheduled end-of-month savings"
+          },
+          {
+            "risk": "Low liquid runway",
+            "severity": "medium",
+            "description": "Closing balance supports ~1.3 days of current burn rate",
+            "fix": "Keep 150000 as minimum working balance"
+          },
+          {
+            "risk": "Repeated small fees (EMTL)",
+            "severity": "low",
+            "description": "150 paid in EMTL charges this month",
+            "fix": "Use consolidated transfers or cheaper channels to avoid EMTL"
+          }
+        ]
+      },
+      "comparisons": [
+        {
+          "metric": "savings_rate (period)",
+          "your_value": 0.4815,
+          "nigerian_avg": 0.21,
+          "verdict": "above average (large one-off plan top-up skewing rate)"
+        },
+        {
+          "metric": "monthly burn rate",
+          "your_value": 22631.129032258064,
+          "nigerian_avg": 15000,
+          "verdict": "higher-than-average monthly outflow"
+        },
+        {
+          "metric": "fees (monthly)",
+          "your_value": 150,
+          "nigerian_avg": 600,
+          "verdict": "low fees overall"
+        },
+        {
+          "metric": "concentration to top recipient",
+          "your_value": 0.2754,
+          "nigerian_avg": 0.08,
+          "verdict": "high concentration risk"
+        },
+        {
+          "metric": "cash withdrawal share",
+          "your_value": 0.0093,
+          "nigerian_avg": 0.2,
+          "verdict": "very low cash usage"
+        },
+        {
+          "metric": "digital transaction frequency",
+          "your_value": 0.9907,
+          "nigerian_avg": 0.8,
+          "verdict": "above average digital usage"
+        }
+      ],
+      "savings": {
+        "total_saved": 871999.91,
+        "savings_rate": 0.4815,
+        "recommended_rate": 0.2,
+        "monthly_gap": 0
+      },
+      "fees": {
+        "total": 150,
+        "avoidable": 150,
+        "annual_projection": 1800,
+        "top_fees": [
+          {
+            "type": "Electronic Money Transfer Levy (EMTL)",
+            "amount": 150,
+            "how_to_avoid": "Use wholesale/pooled transfers or transfer via cheaper channels"
+          }
+        ]
+      },
+      "lifestyle": {
+        "dining": {
+          "restaurant": 22920,
+          "grocery": 75995,
+          "ratio": 0.3016,
+          "frequency": 6
+        },
+        "cash_vs_digital": {
+          "cash_amount": 21000,
+          "cash_percent": 0.0093,
+          "digital_percent": 0.9907
+        },
+        "tech_spend": 0,
+        "entertainment": 5600
+      },
+      "wrapped": {
+        "title": "Salary-Funded Saver with Liquidity Blindspot",
+        "archetype": "Generous Saver",
+        "defining_moment": {
+          "date": "2025-12-19",
+          "description": "Received salary then immediately deposited 950000 into Flexible Savings",
+          "impact": "Large reduction in available balance; created 1-day runway"
+        },
+        "biggest_surprise": "950000 manual savings top-up on payday",
+        "questionable_decision": "Top-up full 950000 to plans on same day as salary",
+        "smartest_move": "Consistent daily automatic 500 contributions (31x)",
+        "money_relationship": "Prioritizes savings but transfers heavily to others; liquidity management is weak",
+        "fun_facts": [
+          {
+            "title": "largest single credit",
+            "stat": "1553974.59 on 2025-12-19",
+            "context": "Salary deposit"
+          },
+          {
+            "title": "daily micro-saves",
+            "stat": "31 contributions totaling 15500",
+            "context": "Automatic daily plan contributions"
+          },
+          {
+            "title": "top single recipient",
+            "stat": "620160 to one person",
+            "context": "8 transfers to ADEWALE OLUWAFERANMI"
+          },
+          {
+            "title": "net cashflow",
+            "stat": "-440320.41 for period",
+            "context": "Outflows exceeded inflows this month"
+          },
+          {
+            "title": "closing balance",
+            "stat": "94964.05",
+            "context": "End-of-period liquidity"
+          }
+        ],
+        "achievements": [
+          {
+            "name": "Large plan top-up",
+            "description": "Saved 950000 into Flexible Savings",
+            "rarity": "rare"
+          },
+          {
+            "name": "Consistent micro-savings",
+            "description": "Made 31 daily contributions without missing",
+            "rarity": "uncommon"
+          },
+          {
+            "name": "Received salary",
+            "description": "Single inflow of 1553974.59",
+            "rarity": "monthly"
+          }
+        ]
+      },
+      "recommendations": {
+        "immediate_actions": [
+          {
+            "action": "Cap ADEWALE OLUWAFERANMI transfers to 3 transactions this month (target total 232560)",
+            "impact": "Preserve ~387600 this month",
+            "difficulty": "medium",
+            "savings": 387600,
+            "priority": 1
+          },
+          {
+            "action": "Reduce manual plan top-up from 950000 to 200000 this month",
+            "impact": "Increase working capital by 750000 immediately",
+            "difficulty": "medium",
+            "savings": 750000,
+            "priority": 1
+          },
+          {
+            "action": "Keep minimum working balance of 150000 in account",
+            "impact": "Prevents overdraft and payment failures",
+            "difficulty": "easy",
+            "savings": 0,
+            "priority": 1
+          },
+          {
+            "action": "Consolidate small EMTL-paying transfers into single transfer to avoid EMTL (save 50 each occurrence)",
+            "impact": "Reduce recurring fees",
+            "difficulty": "easy",
+            "savings": 150,
+            "priority": 3
+          },
+          {
+            "action": "Reduce restaurant/catering spending from 6 visits to 4 visits next month",
+            "impact": "Estimated monthly savings 7640",
+            "difficulty": "easy",
+            "savings": 7640,
+            "priority": 4
+          },
+          {
+            "action": "Limit one-off retail/merchant spends above 20000 without review",
+            "impact": "Control large discretionary outflows",
+            "difficulty": "medium",
+            "savings": 50000,
+            "priority": 3
+          }
+        ],
+        "challenges": [
+          {
+            "name": "Reduce single-recipient concentration",
+            "goal": "Bring ADEWALE OLUWAFERANMI share from 275% of recommended to under 50% of transfers",
+            "savings": 387600
+          },
+          {
+            "name": "Improve runway",
+            "goal": "Increase runway from ~1 day to >=7 days",
+            "savings": 350000
+          },
+          {
+            "name": "Avoid payday impulse top-ups",
+            "goal": "Cap immediate payday auto-topups to 200000",
+            "savings": 750000
+          }
+        ],
+        "budget": {
+          "recommended": {
+            "essentials": 905497.295,
+            "wants": 543298.377,
+            "savings": 362198.918
+          },
+          "current": {
+            "essentials": 1379315.09,
+            "wants": 0,
+            "savings": 871999.91
+          }
+        }
+      },
+      "projections": {
+        "if_no_change": {
+          "annual_spending": 27015780,
+          "year_end_balance": -5188880.87,
+          "trajectory": "negative - account balance will be exhausted within months if patterns continue"
+        },
+        "if_improved": {
+          "annual_spending": 21164580,
+          "year_end_balance": 662319.13,
+          "improvement": 5851200
+        },
+        "milestones": [
+          {
+            "goal": "Maintain minimum balance 150000",
+            "target_date": "2026-02-01",
+            "confidence": "medium",
+            "required_actions": [
+              "Cap ADEWALE transfers to 3/month",
+              "Limit plan top-up to 200000 on payday"
+            ]
+          },
+          {
+            "goal": "Achieve positive monthly net cashflow",
+            "target_date": "2026-03-01",
+            "confidence": "medium",
+            "required_actions": [
+              "Reduce large recipient transfers",
+              "Cut discretionary retail by 20%"
+            ]
+          },
+          {
+            "goal": "Build 1,000,000 emergency buffer in account",
+            "target_date": "2026-06-01",
+            "confidence": "low",
+            "required_actions": [
+              "Redirect 50% of monthly excess savings to liquid buffer",
+              "Avoid large plan top-ups until buffer reached"
+            ]
+          },
+          {
+            "goal": "Lower generosity ratio to below 30% of outflows",
+            "target_date": "2026-04-01",
+            "confidence": "medium",
+            "required_actions": [
+              "Formalize support budget for recipients",
+              "Use scheduled monthly transfers cap"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "message": "Analysis fetched successfully"
+}
