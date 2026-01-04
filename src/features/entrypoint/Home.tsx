@@ -44,7 +44,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex gap-4 justify-center">
+        <div className="flex gap-4 justify-center flex-wrap">
           <Link
             to="/matches"
             className="bg-white text-purple-600 font-bold px-8 py-4 rounded-full hover:bg-gray-100 transition-colors shadow-lg"
@@ -56,6 +56,12 @@ export default function Home() {
             className="bg-purple-700 text-white font-bold px-8 py-4 rounded-full hover:bg-purple-800 transition-colors shadow-lg"
           >
             Learn More
+          </Link>
+          <Link
+            to="/components/showcase"
+            className="bg-primary text-white font-bold px-8 py-4 rounded-full hover:bg-primary-600 transition-colors shadow-lg"
+          >
+            Component Showcase
           </Link>
         </div>
       </div>
