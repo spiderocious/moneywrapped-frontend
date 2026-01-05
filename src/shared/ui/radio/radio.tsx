@@ -55,9 +55,6 @@ export interface RadioGroupProps {
 }
 
 export function RadioGroup({
-  name,
-  value,
-  onChange,
   children,
   className = "",
 }: RadioGroupProps) {

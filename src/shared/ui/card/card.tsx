@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, CSSProperties } from "react";
 
 export type CardVariant = "default" | "elevated" | "outlined";
 
@@ -8,6 +8,7 @@ export interface CardProps {
   readonly className?: string;
   readonly children: ReactNode;
   readonly onClick?: () => void;
+  readonly style?: CSSProperties;
 }
 
 const variantStyles: Record<CardVariant, string> = {
@@ -29,6 +30,7 @@ export function Card({
   className = "",
   children,
   onClick,
+  style,
 }: CardProps) {
   const isClickable = !!onClick;
 
@@ -43,7 +45,7 @@ export function Card({
     .join(" ");
 
   return (
-    <div className={classes} onClick={onClick}>
+    <div className={classes} onClick={onClick} style={style}>
       {children}
     </div>
   );

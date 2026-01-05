@@ -1,4 +1,4 @@
-import { lazy } from "react";
+import { lazy, createElement } from "react";
 import type { RouteObject } from "react-router-dom";
 
 const ShowcaseScreen = lazy(() =>
@@ -9,5 +9,5 @@ const ShowcaseScreen = lazy(() =>
 
 export const showcaseRoutes: RouteObject = {
   path: "/components/showcase",
-  element: <ShowcaseScreen />,
+  element: createElement(ShowcaseScreen),
 };

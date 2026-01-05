@@ -107,6 +107,9 @@ export default {
         88: "22rem", // 352px
         128: "32rem", // 512px
       },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(circle at center, var(--tw-gradient-stops))",
+      },
     },
   },
   plugins: [],
