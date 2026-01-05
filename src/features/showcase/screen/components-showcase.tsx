@@ -10,6 +10,7 @@ import {
   Badge,
   Tab,
   EmptyState,
+  Logo,
 } from "@shared/ui";
 import {
   FiHome,
@@ -40,6 +41,79 @@ export function ComponentsShowcase() {
             All UI components from the design system
           </Text>
         </div>
+
+        {/* Logo */}
+        <Card>
+          <Text variant="heading-2" className="mb-6">
+            Logo
+          </Text>
+
+          <div className="space-y-6">
+            <div>
+              <Text variant="heading-3" className="mb-4">
+                Light Mode
+              </Text>
+              <div className="flex flex-wrap items-center gap-6 p-6 bg-neutral-100 rounded-xl">
+                <div className="text-center">
+                  <Logo mode="light" size="small" />
+                  <Text variant="caption" color="secondary" className="mt-2">
+                    Small
+                  </Text>
+                </div>
+                <div className="text-center">
+                  <Logo mode="light" size="medium" />
+                  <Text variant="caption" color="secondary" className="mt-2">
+                    Medium
+                  </Text>
+                </div>
+                <div className="text-center">
+                  <Logo mode="light" size="large" />
+                  <Text variant="caption" color="secondary" className="mt-2">
+                    Large
+                  </Text>
+                </div>
+                <div className="text-center">
+                  <Logo mode="light" size="xlarge" />
+                  <Text variant="caption" color="secondary" className="mt-2">
+                    XLarge
+                  </Text>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <Text variant="heading-3" className="mb-4">
+                Dark Mode
+              </Text>
+              <div className="flex flex-wrap items-center gap-6 p-6 bg-neutral-800 rounded-xl">
+                <div className="text-center">
+                  <Logo mode="dark" size="small" />
+                  <Text variant="caption" className="mt-2 text-white">
+                    Small
+                  </Text>
+                </div>
+                <div className="text-center">
+                  <Logo mode="dark" size="medium" />
+                  <Text variant="caption" className="mt-2 text-white">
+                    Medium
+                  </Text>
+                </div>
+                <div className="text-center">
+                  <Logo mode="dark" size="large" />
+                  <Text variant="caption" className="mt-2 text-white">
+                    Large
+                  </Text>
+                </div>
+                <div className="text-center">
+                  <Logo mode="dark" size="xlarge" />
+                  <Text variant="caption" className="mt-2 text-white">
+                    XLarge
+                  </Text>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Card>
 
         {/* Buttons */}
         <Card>

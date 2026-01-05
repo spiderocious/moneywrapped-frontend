@@ -74,7 +74,7 @@ export function Text({
   children,
   as,
 }: TextProps) {
-  const Component = as || defaultElements[variant];
+  const Component = (as || defaultElements[variant]) as React.ElementType;
   const finalWeight = weight || defaultWeights[variant];
 
   const classes = [

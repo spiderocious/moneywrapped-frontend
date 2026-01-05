@@ -30,3 +30,7 @@ export type { EmptyStateProps } from "./empty-state";
 // Navigation
 export { Tab } from "./tab";
 export type { TabProps, TabItem } from "./tab";
+
+// Branding
+export { Logo } from "./logo";
+export type { LogoProps, LogoMode, LogoSize } from "./logo";
