@@ -1,14 +1,19 @@
 import { InputHTMLAttributes, forwardRef } from "react";
 
-export interface ToggleProps
-  extends Omit<InputHTMLAttributes<HTMLInputElement>, "type" | "size"> {
+export interface ToggleProps extends Omit<
+  InputHTMLAttributes<HTMLInputElement>,
+  "type" | "size"
+> {
   readonly label?: string;
   readonly checked?: boolean;
   readonly onToggle?: (checked: boolean) => void;
 }
 
 export const Toggle = forwardRef<HTMLInputElement, ToggleProps>(
-  ({ label, checked = false, onToggle, disabled, className = "", ...props }, ref) => {
+  (
+    { label, checked = false, onToggle, disabled, className = "", ...props },
+    ref,
+  ) => {
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
       onToggle?.(e.target.checked);
     };

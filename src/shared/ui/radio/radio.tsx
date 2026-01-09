@@ -1,14 +1,19 @@
 import { InputHTMLAttributes, forwardRef } from "react";
 
-export interface RadioProps
-  extends Omit<InputHTMLAttributes<HTMLInputElement>, "type"> {
+export interface RadioProps extends Omit<
+  InputHTMLAttributes<HTMLInputElement>,
+  "type"
+> {
   readonly label: string;
   readonly value: string;
   readonly checked?: boolean;
 }
 
 export const Radio = forwardRef<HTMLInputElement, RadioProps>(
-  ({ label, value, checked = false, disabled, className = "", ...props }, ref) => {
+  (
+    { label, value, checked = false, disabled, className = "", ...props },
+    ref,
+  ) => {
     return (
       <label
         className={`inline-flex items-center gap-3 cursor-pointer ${
@@ -54,10 +59,7 @@ export interface RadioGroupProps {
   readonly className?: string;
 }
 
-export function RadioGroup({
-  children,
-  className = "",
-}: RadioGroupProps) {
+export function RadioGroup({ children, className = "" }: RadioGroupProps) {
   return (
     <div className={`flex gap-6 ${className}`} role="radiogroup">
       {children}

@@ -1,7 +1,11 @@
 import { Text, Button, Logo, Badge } from "@shared/ui";
 import { FiArrowRight, FiLock } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
+import { routeNames } from "@shared/constants/routes/routes";
 
 export function HeroSection() {
+  const navigate = useNavigate();
+
   return (
     <section className="bg-gradient-to-b from-neutral-50 to-white">
       {/* Navigation */}
@@ -20,17 +24,29 @@ export function HeroSection() {
 
         {/* Desktop navigation */}
         <div className="hidden md:flex items-center gap-4">
-          <Button variant="text" size="medium">
+          <Button
+            variant="text"
+            size="medium"
+            onClick={() => navigate(routeNames.signin)}
+          >
             Sign In
           </Button>
-          <Button variant="primary" size="medium">
+          <Button
+            variant="primary"
+            size="medium"
+            onClick={() => navigate(routeNames.signup)}
+          >
             Sign Up
           </Button>
         </div>
 
         {/* Mobile navigation - only Sign Up */}
         <div className="md:hidden">
-          <Button variant="primary" size="small">
+          <Button
+            variant="primary"
+            size="small"
+            onClick={() => navigate(routeNames.signup)}
+          >
             Sign Up
           </Button>
         </div>
@@ -73,6 +89,7 @@ export function HeroSection() {
             size="large"
             className="px-12 shadow-xl"
             rightIcon={<FiArrowRight />}
+            onClick={() => navigate(routeNames.signup)}
           >
             Get Started Free
           </Button>

@@ -4,8 +4,10 @@ import { FiEye, FiEyeOff, FiAlertCircle } from "react-icons/fi";
 export type InputType = "text" | "email" | "password" | "number" | "tel";
 export type InputState = "default" | "active" | "error" | "disabled";
 
-export interface InputProps
-  extends Omit<InputHTMLAttributes<HTMLInputElement>, "type" | "size"> {
+export interface InputProps extends Omit<
+  InputHTMLAttributes<HTMLInputElement>,
+  "type" | "size"
+> {
   readonly type?: InputType;
   readonly label?: string;
   readonly error?: string;
@@ -42,8 +44,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
   ) => {
     const [showPassword, setShowPassword] = useState(false);
     const finalState = disabled ? "disabled" : error ? "error" : state;
-    const inputType =
-      type === "password" && showPassword ? "text" : type;
+    const inputType = type === "password" && showPassword ? "text" : type;
 
     return (
       <div className={`${fullWidth ? "w-full" : ""}`}>
@@ -51,9 +52,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           <label className="block mb-2">
             <span
               className={`text-base font-medium ${
-                finalState === "error"
-                  ? "text-error"
-                  : "text-neutral-900"
+                finalState === "error" ? "text-error" : "text-neutral-900"
               }`}
             >
               {label}

@@ -1,7 +1,11 @@
 import { Text, Button, Badge } from "@shared/ui";
 import { FiArrowRight, FiLock, FiZap, FiCreditCard } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
+import { routeNames } from "@shared/constants/routes/routes";
 
 export function CtaSection() {
+  const navigate = useNavigate();
+
   return (
     <section className="relative min-h-screen bg-[#0a1628] text-white py-20 px-6 md:px-12 flex items-center justify-center overflow-hidden">
       {/* Subtle Gradient Background */}
@@ -45,6 +49,7 @@ export function CtaSection() {
             size="large"
             rightIcon={<FiArrowRight />}
             className="w-full md:w-auto px-12 py-4 text-lg bg-blue-500 hover:bg-blue-600 rounded-full shadow-lg shadow-blue-500/30"
+            onClick={() => navigate(routeNames.signup)}
           >
             Get Started Free
           </Button>

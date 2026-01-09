@@ -1,11 +1,13 @@
-import { ButtonHTMLAttributes, ReactNode } from "react";
+import { ButtonHTMLAttributes, ReactNode, ElementType } from "react";
 
 export type ButtonVariant = "primary" | "secondary" | "text";
 export type ButtonSize = "small" | "medium" | "large";
 export type ButtonState = "default" | "disabled" | "loading";
 
-export interface ButtonProps
-  extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, "disabled"> {
+export interface ButtonProps extends Omit<
+  ButtonHTMLAttributes<HTMLButtonElement>,
+  "disabled"
+> {
   readonly variant?: ButtonVariant;
   readonly size?: ButtonSize;
   readonly state?: ButtonState;
@@ -14,6 +16,7 @@ export interface ButtonProps
   readonly rightIcon?: ReactNode;
   readonly children: ReactNode;
   readonly className?: string;
+  readonly as?: ElementType;
 }
 
 const variantStyles: Record<ButtonVariant, string> = {
@@ -39,13 +42,15 @@ export function Button({
   rightIcon,
   children,
   className = "",
+  as,
   ...props
 }: ButtonProps) {
+  const Component = as || "button";
   const isDisabled = state === "disabled";
   const isLoading = state === "loading";
 
   const classes = [
-    "font-semibold transition-all duration-200 inline-flex items-center justify-center gap-2",
+    "font-semibold transition-all duration-200 inline-flex items-center justify-center gap-2 cursor-pointer",
     variantStyles[variant],
     sizeStyles[size],
     fullWidth ? "w-full" : "",
@@ -55,7 +60,7 @@ export function Button({
     .join(" ");
 
   return (
-    <button
+    <Component
       className={classes}
       disabled={isDisabled || isLoading}
       {...props}
@@ -85,6 +90,6 @@ export function Button({
       {!isLoading && leftIcon && <span>{leftIcon}</span>}
       <span>{children}</span>
       {!isLoading && rightIcon && <span>{rightIcon}</span>}
-    </button>
+    </Component>
   );
 }

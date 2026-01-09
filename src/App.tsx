@@ -1,21 +1,23 @@
-import { Suspense, lazy } from "react";
+import { Suspense, createElement } from "react";
 import { Routes, Route } from "react-router-dom";
-import { LandingScreen } from "./features/entrypoint/screen/landing-screen";
-
-const ShowcaseScreen = lazy(() =>
-  import("./features/showcase/screen/showcase-screen").then((module) => ({
-    default: module.ShowcaseScreen,
-  })),
-);
+import { routes } from "@shared/constants/routes/routes";
+import { ErrorBoundary } from "@shared/components/error-boundary";
 
 function App() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <Routes>
-        <Route path="/" element={<LandingScreen />} />
-        <Route path="/components/showcase" element={<ShowcaseScreen />} />
-      </Routes>
-    </Suspense>
+    <ErrorBoundary>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          {routes.map((route) => (
+            <Route
+              key={route.name}
+              path={route.path}
+              element={createElement(route.component)}
+            />
+          ))}
+        </Routes>
+      </Suspense>
+    </ErrorBoundary>
   );
 }
 

@@ -102,6 +102,8 @@ export function Footer() {
     setOpenSection(openSection === section ? null : section);
   };
 
+  const year = new Date().getFullYear();
+
   return (
     <footer className="bg-[#0f172a] text-white py-16 px-6 md:px-12">
       <div className="max-w-7xl mx-auto">
@@ -342,14 +344,14 @@ export function Footer() {
             {/* Left: Copyright & Made in Nigeria */}
             <div className="flex items-center gap-8">
               <Text variant="caption" className="text-gray-500 text-sm">
-                © 2024 FinanceWrapped. All rights reserved.
+                © {year} FinanceWrapped. All rights reserved.
               </Text>
               <Text variant="caption" className="text-gray-400 text-sm">
                 Made with{" "}
                 <span className="text-red-500" role="img" aria-label="love">
                   ❤️
                 </span>{" "}
-                in Lagos, Nigeria
+                in Ogbomoso, Nigeria
               </Text>
             </div>
 

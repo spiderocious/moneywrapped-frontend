@@ -20,6 +20,12 @@ export type { RadioProps, RadioGroupProps } from "./radio";
 export { Card } from "./card";
 export type { CardProps, CardVariant } from "./card";
 
+export { StatCard } from "./stat-card";
+export type { StatCardProps } from "./stat-card";
+
+export { AnalysisCard } from "./analysis-card";
+export type { AnalysisCardProps, AnalysisStatus, Analysis } from "./analysis-card";
+
 // Feedback
 export { Badge } from "./badge";
 export type { BadgeProps, BadgeVariant } from "./badge";
