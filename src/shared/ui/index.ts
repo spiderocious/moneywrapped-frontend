@@ -40,3 +40,7 @@ export type { TabProps, TabItem } from "./tab";
 // Branding
 export { Logo } from "./logo";
 export type { LogoProps, LogoMode, LogoSize } from "./logo";
+
+// Story
+export { StoryBoard } from "./story-board";
+export type { StoryBoardProps } from "./story-board";
