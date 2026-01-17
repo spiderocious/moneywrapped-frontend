@@ -8,7 +8,7 @@ type AnalysisStatus = "pending" | "success" | "failed";
 
 export function AnalysisResultScreen() {
   const { analysiscode } = useParams<{ analysiscode: string }>();
-  const [status] = useState<AnalysisStatus>("pending");
+  const [status] = useState<AnalysisStatus>("failed");
 
   // This will be replaced with actual API call to fetch analysis status
   // For now, we default to pending
