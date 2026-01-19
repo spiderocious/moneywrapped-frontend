@@ -131,7 +131,7 @@ export const analysisSuccessMock: SuccessAnalysis = {
       badge: "FINANCIAL HEALTH",
       healthScore: {
         value: 80,
-        displayValue: "100",
+        displayValue: "80",
         maxValue: 100,
         displayText: "/100",
       },

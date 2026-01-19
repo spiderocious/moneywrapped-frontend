@@ -8,6 +8,47 @@ interface FinancialHealthScreenProps {
   readonly data: FinancialHealthScreenData;
 }
 
+// Color scheme based on health score
+function getHealthColors(score: number) {
+  if (score >= 80) {
+    return {
+      gradient: "bg-gradient-to-b from-green-50 via-green-50/50 to-white",
+      primary: "text-green-500",
+      primaryBg: "bg-green-500",
+      stroke: "#22c55e",
+      track: "#dcfce7",
+      icon: "text-green-400",
+    };
+  } else if (score >= 60) {
+    return {
+      gradient: "bg-gradient-to-b from-blue-50 via-blue-50/50 to-white",
+      primary: "text-blue-500",
+      primaryBg: "bg-blue-500",
+      stroke: "#3b82f6",
+      track: "#dbeafe",
+      icon: "text-blue-400",
+    };
+  } else if (score >= 40) {
+    return {
+      gradient: "bg-gradient-to-b from-amber-50 via-amber-50/50 to-white",
+      primary: "text-amber-500",
+      primaryBg: "bg-amber-500",
+      stroke: "#f59e0b",
+      track: "#fef3c7",
+      icon: "text-amber-400",
+    };
+  } else {
+    return {
+      gradient: "bg-gradient-to-b from-red-50 via-red-50/50 to-white",
+      primary: "text-red-500",
+      primaryBg: "bg-red-500",
+      stroke: "#ef4444",
+      track: "#fce7f3",
+      icon: "text-red-400",
+    };
+  }
+}
+
 export function FinancialHealthScreen({ data }: FinancialHealthScreenProps) {
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -29,14 +70,17 @@ export function FinancialHealthScreen({ data }: FinancialHealthScreenProps) {
     },
   };
 
-  // Calculate the percentage for the arc (38 out of 100 = 38%)
+  // Calculate the percentage for the arc
   const percentage = data.healthScore.value / data.healthScore.maxValue;
-  const circumference = 2 * Math.PI * 120; // radius = 120
-  const strokeDashoffset = circumference * (1 - percentage * 0.75); // 0.75 for 270 degree arc
+  const circumference = 2 * Math.PI * 180; // radius = 120
+  const strokeDashoffset = circumference * (1 - percentage); // 0.75 for 270 degree arc
+
+  // Get colors based on score
+  const colors = getHealthColors(data.healthScore.value);
 
   return (
     <motion.div
-      className="w-full h-full flex flex-col px-6 py-16 md:py-20 bg-gradient-to-b from-red-50 via-red-50/50 to-white"
+      className={`w-full h-full flex flex-col px-6 py-16 md:py-20 ${colors.gradient}`}
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -69,7 +113,7 @@ export function FinancialHealthScreen({ data }: FinancialHealthScreenProps) {
               cy="140"
               r="120"
               fill="none"
-              stroke="#fce7f3"
+              stroke={colors.track}
               strokeWidth="16"
               strokeLinecap="round"
               strokeDasharray={circumference * 0.75}
@@ -80,7 +124,7 @@ export function FinancialHealthScreen({ data }: FinancialHealthScreenProps) {
               cy="140"
               r="120"
               fill="none"
-              stroke="#ef4444"
+              stroke={colors.stroke}
               strokeWidth="16"
               strokeLinecap="round"
               strokeDasharray={circumference * 0.75}
@@ -92,7 +136,7 @@ export function FinancialHealthScreen({ data }: FinancialHealthScreenProps) {
 
           {/* Center content */}
           <div className="absolute inset-0 flex flex-col items-center justify-center">
-            <HiHeart className="w-8 h-8 text-red-400 mb-2" />
+            <HiHeart className={`w-8 h-8 ${colors.icon} mb-2`} />
             <div className="flex items-baseline">
               <motion.span
                 className="text-6xl md:text-7xl font-bold text-neutral-900"
@@ -111,7 +155,7 @@ export function FinancialHealthScreen({ data }: FinancialHealthScreenProps) {
 
         {/* Status Badge */}
         <motion.div variants={itemVariants} className="mt-6">
-          <div className="px-6 py-2 bg-red-500 rounded-full">
+          <div className={`px-6 py-2 ${colors.primaryBg} rounded-full`}>
             <Text
               variant="caption"
               weight="bold"
@@ -141,13 +185,13 @@ export function FinancialHealthScreen({ data }: FinancialHealthScreenProps) {
             <Text variant="body" weight="semibold" className="text-neutral-700">
               {data.comparison.userScore.label}
             </Text>
-            <Text variant="body" weight="bold" className="text-red-500">
+            <Text variant="body" weight="bold" className={colors.primary}>
               {data.comparison.userScore.displayValue}
             </Text>
           </div>
           <div className="h-2 bg-neutral-100 rounded-full overflow-hidden">
             <motion.div
-              className="h-full bg-red-500 rounded-full"
+              className={`h-full ${colors.primaryBg} rounded-full`}
               initial={{ width: 0 }}
               animate={{ width: `${data.comparison.userScore.value}%` }}
               transition={{ duration: 1, delay: 0.8, ease: "easeOut" as const }}
@@ -181,10 +225,12 @@ export function FinancialHealthScreen({ data }: FinancialHealthScreenProps) {
         variants={itemVariants}
         className="mt-6 flex items-center justify-center gap-2"
       >
-        <Text variant="body" weight="semibold" className="text-red-500">
+        <Text variant="body" weight="semibold" className={colors.primary}>
           {data.ctaText}
         </Text>
-        <div className="w-8 h-8 rounded-full bg-red-500 flex items-center justify-center">
+        <div
+          className={`w-8 h-8 rounded-full ${colors.primaryBg} flex items-center justify-center`}
+        >
           <FiArrowRight className="w-4 h-4 text-white" />
         </div>
       </motion.div>

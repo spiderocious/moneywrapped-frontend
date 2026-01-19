@@ -7,6 +7,11 @@ import {
   FinancialHealthScreen,
   FinancialReportScreen,
   FinancialChallengeScreen,
+  SpenderPersonalityScreen,
+  BigPictureScreen,
+  SpendingBreakdownScreen,
+  TransfersToPeopleScreen,
+  DailyBurnRateScreen,
 } from "./screens";
 import { Switch, Case } from "meemaw";
 import { useState } from "react";
@@ -73,6 +78,21 @@ export function AnalysisSuccess({ analysis }: AnalysisSuccessProps) {
             </Case>
             <Case when={isActiveScreen(5)}>
               <FinancialChallengeScreen data={data.financial_challenge} />
+            </Case>
+            <Case when={isActiveScreen(6)}>
+              <SpenderPersonalityScreen data={data.spender_personality} />
+            </Case>
+            <Case when={isActiveScreen(7)}>
+              <BigPictureScreen data={data.the_big_picture} />
+            </Case>
+            <Case when={isActiveScreen(8)}>
+              <SpendingBreakdownScreen data={data.spending_breakdown} />
+            </Case>
+            <Case when={isActiveScreen(9)}>
+              <TransfersToPeopleScreen data={data.transfers_to_people} />
+            </Case>
+            <Case when={isActiveScreen(10)}>
+              <DailyBurnRateScreen data={data.daily_burn_rate} />
             </Case>
           </Switch>
         </div>

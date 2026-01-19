@@ -9,7 +9,9 @@ interface FinancialChallengeScreenProps {
   readonly data: FinancialChallengeScreenData;
 }
 
-export function FinancialChallengeScreen({ data }: FinancialChallengeScreenProps) {
+export function FinancialChallengeScreen({
+  data,
+}: FinancialChallengeScreenProps) {
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {

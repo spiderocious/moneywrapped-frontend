@@ -4,3 +4,8 @@ export { PersonalityScreen } from "./personality-screen";
 export { FinancialHealthScreen } from "./financial-health-screen";
 export { FinancialReportScreen } from "./financial-report-screen";
 export { FinancialChallengeScreen } from "./financial-challenge-screen";
+export { SpenderPersonalityScreen } from "./spender-personality-screen";
+export { BigPictureScreen } from "./big-picture-screen";
+export { SpendingBreakdownScreen } from "./spending-breakdown-screen";
+export { TransfersToPeopleScreen } from "./transfers-to-people-screen";
+export { DailyBurnRateScreen } from "./daily-burn-rate-screen";
